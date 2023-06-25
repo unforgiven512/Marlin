@@ -537,7 +537,7 @@
  * If the machine is idle and the temperature over MINTEMP
  * then extrude some filament every couple of SECONDS.
  */
-#define EXTRUDER_RUNOUT_PREVENT
+//#define EXTRUDER_RUNOUT_PREVENT
 #if ENABLED(EXTRUDER_RUNOUT_PREVENT)
   #define EXTRUDER_RUNOUT_MINTEMP 180
   #define EXTRUDER_RUNOUT_SECONDS 20
@@ -2264,9 +2264,9 @@
 #define LIN_ADVANCE
 #if ENABLED(LIN_ADVANCE)
   #if ENABLED(DISTINCT_E_FACTORS)
-    #define ADVANCE_K { 0.08 }    // (mm) Compression length per 1mm/s extruder speed, per extruder
+    #define ADVANCE_K { 0.22 }    // (mm) Compression length per 1mm/s extruder speed, per extruder
   #else
-    #define ADVANCE_K 0.08        // (mm) Compression length applying to all extruders
+    #define ADVANCE_K 0.22        // (mm) Compression length applying to all extruders
   #endif
   //#define ADVANCE_K_EXTRA       // Add a second linear advance constant, configurable with M900 L.
   //#define LA_DEBUG              // Print debug information to serial during operation. Disable for production use.
@@ -2793,7 +2793,7 @@
  *
  * Enable PARK_HEAD_ON_PAUSE to add the G-code M125 Pause and Park.
  */
-//#define ADVANCED_PAUSE_FEATURE
+#define ADVANCED_PAUSE_FEATURE
 #if ENABLED(ADVANCED_PAUSE_FEATURE)
   #define PAUSE_PARK_RETRACT_FEEDRATE         60  // (mm/s) Initial retract feedrate.
   #define PAUSE_PARK_RETRACT_LENGTH            2  // (mm) Initial retract.
@@ -3810,7 +3810,7 @@
    * M200 D0 to disable, M200 Dn to set a new diameter (and enable volumetric).
    * M200 S0/S1 to disable/enable volumetric extrusion.
    */
-  //#define VOLUMETRIC_DEFAULT_ON
+  #define VOLUMETRIC_DEFAULT_ON
 
   //#define VOLUMETRIC_EXTRUDER_LIMIT
   #if ENABLED(VOLUMETRIC_EXTRUDER_LIMIT)
@@ -3827,7 +3827,7 @@
 // @section reporting
 
 // Extra options for the M114 "Current Position" report
-//#define M114_DETAIL         // Use 'M114` for details to check planner calculations
+#define M114_DETAIL         // Use 'M114` for details to check planner calculations
 //#define M114_REALTIME       // Real current position based on forward kinematics
 //#define M114_LEGACY         // M114 used to synchronize on every call. Enable if needed.
 
@@ -3841,7 +3841,7 @@
 #define FASTER_GCODE_PARSER
 
 #if ENABLED(FASTER_GCODE_PARSER)
-  //#define GCODE_QUOTED_STRINGS  // Support for quoted string parameters
+  #define GCODE_QUOTED_STRINGS  // Support for quoted string parameters
 #endif
 
 // Support for MeatPack G-code compression (https://github.com/scottmudge/OctoPrint-MeatPack)
