@@ -527,8 +527,8 @@
  * the minimum temperature your thermistor can read. The lower the better/safer.
  * This shouldn't need to be more than 30 seconds (30000)
  */
-#define PREHEAT_TIME_HOTEND_MS 2500
-#define PREHEAT_TIME_BED_MS 2500
+#define PREHEAT_TIME_HOTEND_MS 500
+#define PREHEAT_TIME_BED_MS 500
 
 // @section extruder
 
@@ -923,7 +923,7 @@
 #define HOMING_BUMP_MM      { 5, 5, 2 }       // (linear=mm, rotational=°) Backoff from endstops after first bump
 #define HOMING_BUMP_DIVISOR { 2, 2, 4 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 
-#define HOMING_BACKOFF_POST_MM { 10, 25, 4 }  // (linear=mm, rotational=°) Backoff from endstops after homing
+#define HOMING_BACKOFF_POST_MM { 10, 25, 7 }  // (linear=mm, rotational=°) Backoff from endstops after homing
 //#define XY_COUNTERPART_BACKOFF_MM 0         // (mm) Backoff X after homing Y, and vice-versa
 
 #define QUICK_HOME                            // If G28 contains XY do a diagonal move first
