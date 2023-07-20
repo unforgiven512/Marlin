@@ -679,17 +679,17 @@
   //#define PID_PARAMS_PER_HOTEND // Use separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with G-code: M301 E[extruder number, 0-2]
 
-  // Creality Ender-3
+  // Creality Ender-3 with Sprite Pro extruder hotend
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  25.80,  22.20 }
-    #define DEFAULT_Ki_LIST {   2.50,   1.08 }
-    #define DEFAULT_Kd_LIST {  66.60, 114.00 }
+    #define DEFAULT_Kp_LIST {  15.76,  22.20 }
+    #define DEFAULT_Ki_LIST {   1.47,   1.08 }
+    #define DEFAULT_Kd_LIST {  42.24, 114.00 }
   #else
-    #define DEFAULT_Kp  25.80
-    #define DEFAULT_Ki  2.50
-    #define DEFAULT_Kd  66.60
+    #define DEFAULT_Kp  15.76
+    #define DEFAULT_Ki  1.47
+    #define DEFAULT_Kd  42.24
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
